@@ -1,0 +1,30 @@
+# 默认：UTF-8 文本、Windows 行尾（CRLF）
+* text=auto eol=crlf
+
+# Shell 脚本必须保持 LF，否则 MSYS/Git Bash 会报 bad interpreter
+*.sh text eol=lf
+*.bash text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.so binary
+*.tar binary
+*.gz binary
+*.zst binary
+*.xz binary
+*.deb binary
+*.apk binary
+*.jar binary
+*.whl binary
+*.zip binary
+*.dex binary
+*.keystore binary
+*.jks binary
+*.tiktoken binary
+*.woff binary
+*.woff2 binary
+*.ttf binary

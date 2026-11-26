@@ -1,0 +1,29 @@
+# 构建中间产物
+/tmp/
+/out/
+/dl/
+/app/build/
+/app/assets/rootfs.tar
+/app/assets/rootfs.tar.gz
+
+# 本地环境配置（含 SDK / JDK / 密钥库路径与口令）
+/local.properties
+
+# 签名密钥
+*.jks
+*.keystore
+!app/keystore/debug.keystore
+tools/build_release.sh
+tools/build_release.cmd
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 编辑器与系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
