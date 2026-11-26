@@ -19,7 +19,7 @@
 
 ## 归属
 
-这是非官方社区项目。[OpenFic](https://github.com/syrizelink/OpenFic) 由 [syrizelink](https://github.com/syrizelink) 维护，采用 Apache-2.0 许可；本仓库中所复用的 [OpenFic](https://github.com/syrizelink/OpenFic) 代码仍保留 Apache-2.0 许可，见 [`upstream/openfic/LICENSE`](upstream/openfic/LICENSE)。
+这是非官方社区项目，与 [OpenFic](https://github.com/syrizelink/OpenFic) 项目没有任何从属关系，本仓库采用 GPL-3.0-or-later 许可发布。[OpenFic](https://github.com/syrizelink/OpenFic) 由 [syrizelink](https://github.com/syrizelink) 维护，采用 Apache-2.0 许可。
 
 ## 许可
 
