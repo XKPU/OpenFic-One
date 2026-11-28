@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "versionCode": 200,
+  "notes": "首个发行版。",
+  "notes_en": "First release.",
+  "size": 43861701,
+  "sha256": "4042b141c9caabfb8906d1ac5cfab64d424a371f7aefe168ca59165253cc46b9",
+  "apk": {
+    "zh": [
+      {
+        "label": "GH-Proxy 镜像",
+        "url": "https://v4.gh-proxy.org/https://github.com/XKPU/OpenFic-One/releases/download/v0.2.0/OpenFicOne.apk"
+      },
+      {
+        "label": "GitHub Releases",
+        "url": "https://github.com/XKPU/OpenFic-One/releases/download/v0.2.0/OpenFicOne.apk"
+      }
+    ],
+    "en": [
+      {
+        "label": "GitHub Releases",
+        "url": "https://github.com/XKPU/OpenFic-One/releases/download/v0.2.0/OpenFicOne.apk"
+      },
+      {
+        "label": "GH-Proxy Mirror",
+        "url": "https://v4.gh-proxy.org/https://github.com/XKPU/OpenFic-One/releases/download/v0.2.0/OpenFicOne.apk"
+      }
+    ]
+  }
+}

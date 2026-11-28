@@ -15,6 +15,7 @@
 !app/keystore/debug.keystore
 tools/build_release.sh
 tools/build_release.cmd
+tools/gen_update.py
 
 # Python
 __pycache__/
