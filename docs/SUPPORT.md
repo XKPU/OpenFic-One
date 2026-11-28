@@ -4,26 +4,11 @@
 
 ## 目录
 
-- [报告缺陷与建议](#报告缺陷与建议)
 - [常见问题](#常见问题)
+- [报告缺陷与建议](#报告缺陷与建议)
 - [安全](#安全)
 - [参与贡献](#参与贡献)
 - [许可](#许可)
-
-## 报告缺陷与建议
-
-缺陷报告、功能建议与使用疑问，请提交到 GitHub Issues：
-
-[https://github.com/XKPU/OpenFic-One/issues](https://github.com/XKPU/OpenFic-One/issues)
-
-### 一份有用的缺陷报告通常包含
-
-1. **你做了什么** —— 导致问题的操作步骤。
-2. **预期结果** 与 **实际结果**。
-3. **环境** —— OF-One 版本（控制台首行形如 `OF-One 1.0.0`）与 OpenFic 版本（「One 设置」面板或页脚）、Android 版本、机型。
-4. **启动日志**（可选） —— 控制台页面的滚动输出，截图即可。
-
-> **请勿附带含有 API Key 或个人数据的日志或配置文件。**
 
 ## 常见问题
 
@@ -45,7 +30,13 @@
 
 **切出应用后回来，又开始重新初始化检查**
 
-多半是系统回收了后台进程。请按首次启动时小字提示，在系统设置里允许 OF-One 后台运行并忽略电池优化；控制台页面顶部有直达该设置的链接。
+多半是系统回收了后台进程。请按首次启动时小字提示，在系统设置里允许 OpenFic One 后台运行并忽略电池优化；控制台页面顶部有直达该设置的链接。
+
+**怎么切换深色 / 浅色主题**
+「One 设置」面板里的「界面主题」提供跟随系统、浅色、深色三档，控制台标题栏也有一键切换。选择会写入 OpenFic 的主题设置，控制台与 OpenFic 页面同时生效；服务未启动时写入数据库，启动后自动对齐。
+
+**按返回键为什么没退出**
+在 OpenFic 首页按返回键会回到后台而不是退出应用，本地服务与页面状态都会保留，再点图标即可继续。安装阶段同理，避免误触中断安装。
 
 **「One 设置」在哪里**
 
@@ -53,7 +44,22 @@
 
 **更新会不会丢作品**
 
-不会。更新只重建 `/opt/venv`；重建根文件系统前会把 `/root/.openfic` 备份到 `files/share/_backup_openfic`，解压后自动恢复。
+不会。更新 OpenFic 走 `pip install --upgrade` 原地升级，保留现有 `/opt/venv` 环境与全部用户数据；重建根文件系统前会把 `/root/.openfic` 备份到 `files/share/_backup_openfic`，解压后自动恢复。
+
+## 报告缺陷与建议
+
+缺陷报告、功能建议与使用疑问，请提交到 GitHub Issues：
+
+[https://github.com/XKPU/OpenFic-One/issues](https://github.com/XKPU/OpenFic-One/issues)
+
+### 一份有用的缺陷报告通常包含
+
+1. **你做了什么** —— 导致问题的操作步骤。
+2. **预期结果** 与 **实际结果**。
+3. **环境** —— OpenFic One 版本（控制台首行形如 `OpenFic One 1.0.0`）与 OpenFic 版本（「One 设置」面板或页脚）、Android 版本、机型。
+4. **启动日志**（可选） —— 控制台页面的滚动输出，截图即可。
+
+> **请勿附带含有 API Key 或个人数据的日志或配置文件。**
 
 ## 安全
 
@@ -75,7 +81,7 @@
 本项目基于 **GNU General Public License v3.0 Or Later (GPL-3.0-or-later)** 发布。
 
 ```
-OpenFic One - Android 上的 OpenFic 启动器。
+OpenFic One - 一个在 Android 上启动 OpenFic 的启动器。。
 Copyright (C) 2026 K_PU
 
 This program is free software: you can redistribute it and/or modify

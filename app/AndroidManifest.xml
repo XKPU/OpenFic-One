@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- versionCode / versionName 由 tools/build_apk.sh 按 version.txt 覆盖，此处仅为占位 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cc.oenfic.one"
+    package="cc.openfic.one"
     android:versionCode="2"
     android:versionName="1.0.0">
 
@@ -12,6 +13,9 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:label="OF-One"
@@ -23,7 +27,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
             android:windowSoftInputMode="adjustResize"
             android:theme="@android:style/Theme.Material.NoActionBar">
             <intent-filter>
@@ -31,5 +35,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".ApkProvider"
+            android:authorities="cc.openfic.one.apk"
+            android:exported="false"
+            android:grantUriPermissions="true" />
     </application>
 </manifest>

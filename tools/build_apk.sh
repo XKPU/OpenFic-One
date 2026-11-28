@@ -116,9 +116,26 @@ KPASS="$OFONE_KEYPASS"
 
 rm -rf "$OUT"; mkdir -p "$OUT/classes" "$OUT/dex" "$OUT/gen"
 
+VER_FILE="$BASE/version.txt"
+[ -f "$VER_FILE" ] || die "找不到版本文件：$VER_FILE"
+APP_VERSION="$(tr -d ' \t\r\n' < "$VER_FILE")"
+printf '%s' "$APP_VERSION" | grep -Eq '^[0-9]+(\.[0-9]+){1,2}$' \
+  || die "version.txt 版本号格式不正确：$APP_VERSION"
+V1="${APP_VERSION%%.*}"
+REST="${APP_VERSION#*.}"
+V2="${REST%%.*}"
+V3=0
+case "$REST" in *.*) V3="${REST#*.}" ;; esac
+VCODE=$((10#$V1 * 10000 + 10#$V2 * 100 + 10#$V3))
+MANIFEST="$OUT/AndroidManifest.xml"
+sed -e "s/android:versionCode=\"[0-9]*\"/android:versionCode=\"$VCODE\"/" \
+    -e "s/android:versionName=\"[^\"]*\"/android:versionName=\"$APP_VERSION\"/" \
+    "$APP/AndroidManifest.xml" > "$MANIFEST"
+echo "版本：$APP_VERSION（versionCode $VCODE）"
+
 echo "[1/6] aapt package"
 "$AAPT" package -f -m \
-  -M "$APP/AndroidManifest.xml" \
+  -M "$MANIFEST" \
   -S "$APP/res" \
   -J "$OUT/gen" \
   -A "$APP/assets" \

@@ -24,7 +24,7 @@
 
 ### 注意事项
 
-- 我们只接收 OF-One 相关的安全问题，任何 OpenFic 相关的安全问题请直接向 OpenFic 项目报告。
+- 我们只接收 OpenFic One 相关的安全问题，任何 OpenFic 相关的安全问题请直接向 OpenFic 项目报告。
 
 ### 请在报告中包含
 
@@ -46,7 +46,7 @@
 本项目基于 **GNU General Public License v3.0 Or Later (GPL-3.0-or-later)** 发布。
 
 ```
-OpenFic One - Android 上的 OpenFic 启动器。
+OpenFic One - 一个在 Android 上启动 OpenFic 的启动器。。
 Copyright (C) 2026 K_PU
 
 This program is free software: you can redistribute it and/or modify
